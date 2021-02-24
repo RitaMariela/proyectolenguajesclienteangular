@@ -1,0 +1,44 @@
+
+<body>
+    
+    <div class="mat-elevation-z8">
+        <br>
+    <br>
+        <label>Reported Issues</label>
+    <button mat-raised-button (click)="logOut()" >Log Out</button><p></p>
+    <br>
+    <br>
+        <table mat-table [dataSource]="dataSource">
+      
+          <ng-container matColumnDef="issueCode">
+            <th mat-header-cell *matHeaderCellDef> Issue Code </th>
+            <td mat-cell *matCellDef="let issues"> {{issues.issueCode}} </td>
+          </ng-container>
+      
+          <ng-container matColumnDef="serviceCode">
+            <th mat-header-cell *matHeaderCellDef> Serive </th>
+            <td mat-cell *matCellDef="let issues"> {{issues.serviceCode}} </td>
+          </ng-container>
+    
+           <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let issues"> {{issues.status}} </td>
+          </ng-container>
+          <ng-container matColumnDef="registerTimestamp">
+            <th mat-header-cell *matHeaderCellDef> RegisterTimestamp  </th>
+            <td mat-cell *matCellDef="let issues"> {{issues.registerTimestamp}} </td>
+          </ng-container>
+      
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+     
+      
+      <!-- Copyright 2020 Google LLC. All Rights Reserved.
+          Use of this source code is governed by an MIT-style license that
+          can be found in the LICENSE file at http://angular.io/license -->
+</body>

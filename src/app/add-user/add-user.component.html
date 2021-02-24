@@ -1,0 +1,63 @@
+<body>
+    <div class="center" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="box">
+            
+            <mat-card-header>
+                <h1>TeleAtlántico</h1><br>
+            </mat-card-header>
+               
+            <form class="vertical-center">
+                <img class="myImg" src="assets/images/alien.png" alt="">
+                <mat-card-content>
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.name" name="name" placeholder="Name" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.firstSurname" name="firstSurname"
+                            placeholder="FirstSurname" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.secondName" name="secondName" placeholder="SecondSurname"
+                            required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                      
+                        <input matInput [(ngModel)]="userData.email" name="email" placeholder="Email" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.password" name="password" placeholder="Password" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.phone" name="phone" placeholder="Phone" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                       
+                        <input matInput [(ngModel)]="userData.secondContact" name="secondContact"
+                            placeholder="Second Contact" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="userData.address" name="address" placeholder="Address" required>
+                    </mat-form-field>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="addUser()">Check In</button>
+                  </mat-card-actions>
+            </form>
+        </mat-card>
+    </div>
+</body>
+

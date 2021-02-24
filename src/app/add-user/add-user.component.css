@@ -1,0 +1,31 @@
+html, body { height: 100%; }
+body { background: #00C0F3; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -1000%);
+    font-family: "Times New Roman", Times, serif
+}
+.background {
+    background: #00C0F3;
+  }
+
+  .center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    width:350px;
+    text-align:center;
+    margin: 0 auto;
+  }
+  
+.mat-raised-button{
+  background: #005DA4;
+  color: #fff;
+}
+
+.mat-button{
+  color: #2D9CDB;
+}
