@@ -30,3 +30,12 @@ h1{
 .mat-button{
   color: #2D9CDB;
 }
+.box{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    margin: 0 auto;
+    width:700px;
+}

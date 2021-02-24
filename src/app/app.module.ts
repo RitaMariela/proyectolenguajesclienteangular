@@ -18,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material.module';
 import { AddUserComponent } from './add-user/add-user.component';
+import { SeeDetailsComponent } from './see-details/see-details.component';
 const appRoutes: Routes =[
   {
     path: 'issues',
@@ -37,6 +38,16 @@ const appRoutes: Routes =[
     data: { title: 'Login' }
   },
   {
+    path: 'details/:issueCode',
+    component: SeeDetailsComponent,
+    data: { title: 'Issue Details' }
+  },
+  {
+    path: 'details',
+    component: SeeDetailsComponent,
+    data: { title: 'Details' }
+  },
+  {
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
@@ -50,7 +61,8 @@ const appRoutes: Routes =[
     AppComponent,
     IssueListComponent,
     LoginComponent,
-    AddUserComponent 
+    AddUserComponent,
+    SeeDetailsComponent 
     
   ],
   imports: [

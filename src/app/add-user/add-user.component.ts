@@ -8,8 +8,8 @@ import { RestService } from '../rest.service';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-//Hola
-  @Input() userData = {name:'', firstSurname:'', secondName:'',email:'',password:'', phone:0,secondContact:0,address:''};
+
+  @Input() userData = {name:'', firstSurname:'', secondName:'',email:'',password:'', phone:0,secondContact:0,address:'',service:''};
   
   constructor(public rest:RestService, private route: ActivatedRoute, private router: Router) { }
 
