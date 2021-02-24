@@ -48,14 +48,25 @@
                     </mat-form-field>
 
                     <mat-form-field class="login-full-width">
-                        
                         <input matInput [(ngModel)]="userData.address" name="address" placeholder="Address" required>
                     </mat-form-field>
+
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>Services</mat-label>
+                    <select matNativeControl required>
+                      <option value="Cable">Cable</option>
+                      <option value="Landline">Landline</option>
+                      <option value="Mobile phone">Mobile phone</option>
+                      <option value="Internet">Internet</option>
+                    </select>
+                  </mat-form-field>
 
                 </mat-card-content>
                 <mat-card-actions>
                     <button mat-button (click)="addUser()">Check In</button>
                   </mat-card-actions>
+
             </form>
         </mat-card>
     </div>

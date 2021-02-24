@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table' 
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatSelectModule} from '@angular/material/select';
 import { from } from 'rxjs';
 
 import { IssueListComponent } from './issue-list/issue-list.component';
@@ -63,7 +64,8 @@ const appRoutes: Routes =[
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MaterialModule
+    MaterialModule,
+    MatSelectModule
     
   ],
   providers: [],

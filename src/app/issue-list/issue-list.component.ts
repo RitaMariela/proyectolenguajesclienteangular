@@ -9,7 +9,7 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./issue-list.component.css']
 })
 export class IssueListComponent implements AfterViewInit {
-  displayedColumns: string[] = ['issueCode', 'serviceCode', 'status', 'registerTimestamp'];
+  displayedColumns: string[] = ['issueCode', 'serviceCode', 'status', 'registerTimestamp','details'];
   dataSource = new MatTableDataSource<any>();
   issues:any = [];
 
