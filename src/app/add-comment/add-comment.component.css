@@ -4,8 +4,9 @@ h1{
     position:absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%, -1000%);
-    font-family: "Times New Roman", Times, serif
+    transform: translate(-80%, -180%);
+    font-family: "Times New Roman", Times, serif;
+    font-size: small;
 }
 .background {
     background: #00C0F3;
@@ -16,7 +17,7 @@ h1{
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
-    width:500px;
+    width:350px;
     text-align:center;
     margin: 0 auto;
   }
@@ -29,16 +30,4 @@ h1{
 
 .mat-button{
   color: #2D9CDB;
-}
-.box{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    text-align:center;
-    margin: 0 auto;
-    width:700px;
-}
-.login-full-width{
-    width: 500px;
 }

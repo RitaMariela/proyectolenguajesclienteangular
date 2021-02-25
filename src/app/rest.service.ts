@@ -34,15 +34,28 @@ export class RestService {
   addUser (user): Observable<any> {
     console.log(user);
     return this.http.post<any>(endpoint + 'client/add/', JSON.stringify(user), httpOptions).pipe(
-      tap((student) => console.log('added student')),
-      catchError(this.handleError<any>('addStudent'))
+      tap((student) => console.log('added user')),
+      catchError(this.handleError<any>('adduser'))
     );
   }
-  getDetails(issueCode): Observable<any> {
-    return this.http.get(endpoint + 'issue/get/' + issueCode).pipe(
+  getIssueCode(id): Observable<any> {
+    return this.http.get(endpoint + 'issue/get/'+id).pipe(
+      map(this.extractData),
+      catchError(this.handleError<any>('getissueCode'))
+      );
+  }
+  getDetails(id): Observable<any> {
+    return this.http.get(endpoint + 'issue/get/'+id).pipe(
       map(this.extractData),
       catchError(this.handleError<any>('getClientById'))
       );
+  }
+  insertNewComment(comment):Observable<any> {
+    console.log(comment);
+    return this.http.post<any>(endpoint + 'comment/add/', JSON.stringify(comment), httpOptions).pipe(
+      tap((comment) => console.log('added comment')),
+      catchError(this.handleError<any>('addcomment'))
+    );
   }
   private handleError<T> (operation = 'operation', result?: T){
     return (error: any): Observable<T> =>{

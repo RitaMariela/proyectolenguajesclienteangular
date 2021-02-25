@@ -12,32 +12,32 @@
                     </mat-card-header>
                     <mat-form-field class="login-full-width">
 
-                        <input matInput  name="issueCode" placeholder="IssueCode" required>
+                        <input matInput [(ngModel)]="detailsData.issueCode"  readonly="readonly" name="issueCode" placeholder="IssueCode" >
                     </mat-form-field>
 
                     <mat-form-field class="login-full-width">
 
-                        <input matInput   name="description" placeholder="Description" required>
+                        <input matInput [(ngModel)]="detailsData.description"  readonly="readonly"  name="description" placeholder="Description">
+                    </mat-form-field>
+                     <br>
+                    <mat-form-field class="login-full-width">
+
+                        <input matInput [(ngModel)]="detailsData.registerTimestamp" readonly="readonly" name="registerTimestamp" placeholder="Date-Time" >
                     </mat-form-field>
 
                     <mat-form-field class="login-full-width">
 
-                        <input matInput name="registerTimestamp" placeholder="Date-Time" required>
+                        <input matInput [(ngModel)]="detailsData.status" readonly="readonly"  name="status" placeholder="Status" >
                     </mat-form-field>
 
                     <mat-form-field class="login-full-width">
 
-                        <input matInput  name="status" placeholder="Status" required>
-                    </mat-form-field>
-
-                    <mat-form-field class="login-full-width">
-
-                        <input matInput name="comments" placeholder="Comments" required>
+                        <textarea matInput  name="comments" readonly="readonly" placeholder="Comments" ></textarea>
                     </mat-form-field>
 
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-button>Add comment</button>
+                    <button mat-button (click)="addComment(detailsData.issueCode)">Add comment</button>
                 </mat-card-actions>
 
                 <mat-card-actions>
@@ -48,3 +48,7 @@
         </mat-card>
     </div>
 </body>
+
+
+
+

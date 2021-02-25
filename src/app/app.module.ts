@@ -19,6 +19,8 @@ import { LoginComponent } from './login/login.component';
 import { MaterialModule } from './material.module';
 import { AddUserComponent } from './add-user/add-user.component';
 import { SeeDetailsComponent } from './see-details/see-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AddCommentComponent } from './add-comment/add-comment.component';
 const appRoutes: Routes =[
   {
     path: 'issues',
@@ -30,6 +32,12 @@ const appRoutes: Routes =[
     path: 'user',
     component: AddUserComponent,
     data: { title: 'Add user' }
+
+  },
+  {
+    path: 'addComment/:issueCode',
+    component: AddCommentComponent,
+    data: { title: 'Add Comment' }
 
   },
   {
@@ -62,7 +70,8 @@ const appRoutes: Routes =[
     IssueListComponent,
     LoginComponent,
     AddUserComponent,
-    SeeDetailsComponent 
+    SeeDetailsComponent,
+    AddCommentComponent 
     
   ],
   imports: [
@@ -77,7 +86,8 @@ const appRoutes: Routes =[
     MatPaginatorModule,
     MatSortModule,
     MaterialModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

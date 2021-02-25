@@ -33,7 +33,7 @@
             <th mat-header-cell *matHeaderCellDef> Details  </th>
             <mat-cell *matCellDef="let issues">
                         
-             <p><button mat-button (click)="details()">details</button></p>
+             <p><button mat-button (click)="details(issues.issueCode)">details</button></p>
             </mat-cell>
           </ng-container>
           

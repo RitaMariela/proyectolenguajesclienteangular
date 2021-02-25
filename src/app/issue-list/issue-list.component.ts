@@ -37,8 +37,8 @@ export class IssueListComponent implements AfterViewInit {
       this.router.navigate(["/login"]);
   
   }
-  details():void{
-    this.router.navigate(["/details"]);
+  details(issueCode):void{
+    this.router.navigate(["/details/"+issueCode]);
 
 }
   add(){
