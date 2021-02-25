@@ -25,5 +25,8 @@ export class SeeDetailsComponent implements OnInit {
   addComment(issueCode):void{
     this.router.navigate(["/addComment/"+issueCode]);
 }
+goBack():void{
+  this.router.navigate(["/issues"]);
+}
 
 }

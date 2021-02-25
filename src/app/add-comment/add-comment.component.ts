@@ -26,11 +26,14 @@ export class AddCommentComponent implements OnInit {
 
   addNewComment(){
     this.rest.insertNewComment(this.addCommentData).subscribe((result) => {
-      this.router.navigate(['/issue']);
-  
+      //this.router.navigate(['/issue']);
+      alert("\'Comment entered correctly\'");
     }, (err)=>{
       console.log(err);
     });
 
+}
+goBack(issueCode){
+  this.router.navigate(["/details/"+issueCode]);
 }
 }
