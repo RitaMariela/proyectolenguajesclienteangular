@@ -25,11 +25,14 @@ export class AddIssueComponent implements OnInit {
   addIssue(){
     this.issueData.serviceCode=this.seleccionada;
     this.rest.addIssue(this.issueData).subscribe((result) => {
-     
+      alert("\'Issue added correctly\'");
 
     }, (err)=>{
       console.log(err);
     });
   }
-
+  goBack(){
+    this.router.navigate(["/issues"]);
+  }
+  
 }

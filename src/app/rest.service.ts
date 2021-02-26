@@ -57,6 +57,13 @@ export class RestService {
       catchError(this.handleError<any>('addcomment'))
     );
   }
+  getClients(): Observable<any> {
+    return this.http.get(endpoint + 'client/clients').pipe(
+      map(this.extractData),
+      catchError(this.handleError<any>('getClients'))
+      );
+  }
+ 
   addIssue(issue):Observable<any> {
     console.log(issue);
     return this.http.post<any>(endpoint + 'issue/add/', JSON.stringify(issue), httpOptions).pipe(

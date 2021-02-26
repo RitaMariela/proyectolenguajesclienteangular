@@ -27,7 +27,7 @@ export class AddCommentComponent implements OnInit {
   addNewComment(){
     this.rest.insertNewComment(this.addCommentData).subscribe((result) => {
       //this.router.navigate(['/issue']);
-      alert("\'Comment entered correctly\'");
+      alert("\'Comment sent correctly\'");
     }, (err)=>{
       console.log(err);
     });

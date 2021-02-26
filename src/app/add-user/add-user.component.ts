@@ -17,10 +17,13 @@ export class AddUserComponent implements OnInit {
   }
   addUser(){
     this.rest.addUser(this.userData).subscribe((result) => {
-      this.router.navigate(['/login']);
-
+      alert("\'Registered Successfully\'");
     }, (err)=>{
       console.log(err);
     });
+  }
+
+  close(){
+    this.router.navigate(['/login']);
   }
 }
