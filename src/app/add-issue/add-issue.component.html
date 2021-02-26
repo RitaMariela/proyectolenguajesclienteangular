@@ -1,0 +1,53 @@
+  
+<body>
+    <div class="center" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="box">
+            
+            <mat-card-header>
+                <h1>TeleAtlántico</h1><br>
+            </mat-card-header>
+               
+            <form class="vertical-center">
+                <img class="myImg" src="assets/images/alien.png" alt="">
+                <mat-card-content>
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="issueData.description" name="description" placeholder="Description" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="issueData.contactPhone" name="contactPhone"
+                            placeholder="ContactPhone" required>
+                    </mat-form-field>
+
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="issueData.contactEmail" name="contactEmail" placeholder="ContactEmail"
+                            required>
+                    </mat-form-field>
+
+                  
+                    <mat-form-field class="login-full-width">
+                        
+                        <input matInput [(ngModel)]="issueData.address" name="address" placeholder="Address"
+                            required>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <mat-select placeholder="Services" [(ngModel)]="seleccionada" name="operacion">
+                          <mat-option *ngFor="let sv of services" [value]="sv.valor">
+                            {{sv.name}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button (click)="addIssue()">Check In</button>
+                  </mat-card-actions>
+
+            </form>
+        </mat-card>
+    </div>
+</body>

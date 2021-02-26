@@ -21,6 +21,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { SeeDetailsComponent } from './see-details/see-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AddCommentComponent } from './add-comment/add-comment.component';
+import { AddIssueComponent } from './add-issue/add-issue.component';
 const appRoutes: Routes =[
   {
     path: 'issues',
@@ -39,6 +40,11 @@ const appRoutes: Routes =[
     component: AddCommentComponent,
     data: { title: 'Add Comment' }
 
+  },
+  {
+    path: 'add-issue',
+    component: AddIssueComponent,
+    data: { title: 'Add Issue' }
   },
   {
     path: 'login',
@@ -71,7 +77,8 @@ const appRoutes: Routes =[
     LoginComponent,
     AddUserComponent,
     SeeDetailsComponent,
-    AddCommentComponent 
+    AddCommentComponent,
+    AddIssueComponent 
     
   ],
   imports: [

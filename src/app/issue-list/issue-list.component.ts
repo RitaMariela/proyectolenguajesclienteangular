@@ -42,7 +42,7 @@ export class IssueListComponent implements AfterViewInit {
 
 }
   add(){
-    this.router.navigate(['/issue-add']);
+    this.router.navigate(['/add-issue']);
 
   }
   

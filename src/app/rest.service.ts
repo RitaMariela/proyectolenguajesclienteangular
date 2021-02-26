@@ -57,6 +57,14 @@ export class RestService {
       catchError(this.handleError<any>('addcomment'))
     );
   }
+  addIssue(issue):Observable<any> {
+    console.log(issue);
+    return this.http.post<any>(endpoint + 'issue/add/', JSON.stringify(issue), httpOptions).pipe(
+      tap((comment) => console.log('added issue')),
+      catchError(this.handleError<any>('addissue'))
+    );
+  }
+  
   private handleError<T> (operation = 'operation', result?: T){
     return (error: any): Observable<T> =>{
 
